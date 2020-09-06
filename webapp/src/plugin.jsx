@@ -12,7 +12,8 @@ export default class Plugin {
                 () => {},
                 <FormattedMessage
                     id='plugin.name'
-                    defaultMessage={'Test Plugin ' + i}
+                    defaultMessage='Test Plugin {num}'
+                    values={{num: i + 1}}
                 />,
             );
         }
