@@ -2,9 +2,9 @@
 
 const manifest = JSON.parse(`
 {
-    "id": "com.mattermost.plugin-starter-template",
-    "name": "Plugin Starter Template",
-    "description": "This plugin serves as a starting point for writing a Mattermost plugin.",
+    "id": "com.mattermost.test-plugin",
+    "name": "Test Plugin",
+    "description": "This plugin serves as a test plugin for e2e tests.",
     "version": "0.1.0",
     "min_server_version": "5.12.0",
     "server": {
