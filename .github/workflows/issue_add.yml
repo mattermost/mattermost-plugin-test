@@ -13,7 +13,13 @@ jobs:
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v0.5.0
+      - uses: mattermost/github-app-installation-token-action@181cd1b8c94b158428c4facfe043d6e28c20be55
+        id: ghapp
+        with:
+          appId: "${{ vars.UNIFIED_CI_APP_ID }}"
+          installationId: "${{ vars.UNIFIED_CI_INSTALLATION_ID }}"
+          privateKey: ${{ secrets.UNIFIED_CI_PRIVATE_KEY }}
+      - uses: actions/add-to-project@31b3f3ccdc584546fc445612dec3f38ff5edb41c #v0.5.0
         with:
           project-url: https://github.com/orgs/mattermost/projects/9
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ steps.ghapp.outputs.token }}
