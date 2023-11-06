@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   add-to-project:
+    if: ${{ github.repository_owner == 'mattermost' }}
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
