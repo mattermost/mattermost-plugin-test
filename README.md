@@ -2,6 +2,8 @@
 
 This plugin serves as a starting point for writing a Mattermost plugin. Feel free to base your own plugin off this repository.
 
+test
+
 To learn more about plugins, see [our plugin documentation](https://developers.mattermost.com/extend/plugins/).
 
 ## Getting Started
